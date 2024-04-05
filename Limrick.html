@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7792d2b4cd.js" crossorigin="anonymous"></script>
+    <title>Limrick-template</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            
+        }
+        .parent1{
+            width: 100%;
+            height: auto;
+            /* border: 1px solid; */
+        }
+        .navbar-1{
+            width: 100%;
+            height: 55px;
+            background-color: rgb(38,38,38);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        .navchild-1{
+            width: 14%;
+            height: 100%;
+            /* border: 1px solid red; */
+        }
+        .picture-1{
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: contain;
+            transition: 1s linear;
+
+        }
+        .box:hover .picture-1{
+            transform: rotate(5deg) scale(1.1);
+            /* transform: ; */
+
+        }
+        .navchild-2{
+            width: 94px;
+            height: 31px;
+            background-color:rgb(130,180,64);
+            border-radius: 4px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            Font-size: 14px;
+            Font-weight: 400;
+            Line-height: 21px;
+            color: rgb(255, 255, 255);
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           transition: .5s;
+        
+        }
+        .navchild-2:hover{
+            background-color: rgb(112, 155, 57);
+
+        }
+        .navbar-2{
+            width: 100%;
+            height: 130px;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+        }
+        .nav2-child1{
+            width: 15%;
+            height: 45px;
+            /* border: 1px solid; */
+
+        }
+        .icon-div{
+            width: max-content;
+            height: max-content;
+            /* border: 1px solid; */
+            display: flex;
+        }
+        .icon-1{
+            font-size: 23px;
+        }
+        .icon-2{
+            font-size: 17px;
+            margin-left: 20px;
+            transition: .5s;
+        }
+        .icon-2:hover{
+            color: rgb(238, 22, 94);
+        }
+        .div1{
+            width: 100%;
+            height: max-content;
+            /* background-color: aqua; */
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-rows: 300px 300px 300px 300px 300px ;
+
+        }
+        .box{
+            /* border: 1px solid; */
+            background-color: red;
+            overflow: hidden;
+            
+
+        }
+       
+        .b1{
+            grid-column: 1/3;
+            grid-row: 1/3;
+            position: relative;
+            
+
+        }
+        .child-box1{
+            width: 100%;
+            height: 100%;
+            /* border: 1px solid green; */
+            position: absolute;
+            margin: 0;
+            top: 0;
+
+        }
+        .cdiv-1{
+            width: 60%;
+            height: 1px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            margin-left: 33%;
+            margin-top: 8%;
+
+        }
+        .cdiv-2{
+            width: 1px;
+            height: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            margin-left: 88%;
+            margin-top: -5%;
+        }
+        .cdiv-3{
+            width: 50%;
+            height: 1px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            margin-left: 8%;
+            margin-top: 31%;
+
+        }
+        .cdiv-4{
+            width: 1px;
+            height: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            margin-top: -40%;
+            margin-left: 15%;
+        }
+        .b1-type{
+            width: 60%;
+            height: max-content;
+            /* border: 1px solid red; */
+            margin-top: -45%;
+            margin-left: 17%;
+        }
+        .b1-h1{
+            font-size: 60px;
+            font-weight: 600;
+            color: white;
+            transition: .5s;
+        }
+        .b1-h1:hover{
+            color: rgb(238, 22, 94) ;
+
+        }
+        .b1-btn{
+            width: 200px;
+            height: 60px;
+            background-color:rgb(238, 22, 94) ;
+            border: rgb(238, 22, 94);
+            border-radius: 30px;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+            transition: .5s;
+
+
+        }
+        .b1-btn:hover{
+            background-color: transparent;
+            border: 2px solid rgb(238, 22, 94);
+            color: rgb(238, 22, 94);
+
+        }
+        .b-2{
+            position: relative;
+        }
+
+        .box2-child{
+            width: 100%;
+            height: 100%;
+            top: 0;
+            margin: 0;
+            position: absolute;
+            /* border: 1px solid yellow; */
+        }
+        .pandb{
+            width: 100%;
+            height: 70px;
+            /* border: 1px solid orange; */
+            margin-top: 120px;
+            display: flex;
+            /* overflow: hidden; */
+        }
+        .pink-div{
+            width:50% ;
+            height: 100%;
+            background-color: rgb(238, 22, 94) ;
+            /* display: inline-block; */
+            /* margin-left: -50%; */
+        }
+
+        .black-div{
+            width:50% ;
+            height: 100%;
+            /* display: inline-block; */
+            background-color: black ;
+            margin-left: 320px;
+            transition: .5s;
+            
+        }
+        .box2-child:hover .black-div{
+            margin-left: 0px;
+
+
+        }
+        .hover-div{
+            width: 100%;
+            height: max-content;
+            /* border: 1px solid; */
+            display: flex;
+            /* opacity: 0; */
+            transition: .5s;
+            opacity: 0;
+        }
+        .box2-child:hover .hover-div{
+            margin-top: -22%;
+            opacity: 1;
+
+
+        }
+        .up-div-1{
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 4px;
+            margin-left:30% ;
+            margin-top: 3%;
+            text-align: center;
+            padding-top: 12px;
+        }
+        .h-cons{
+            font-size: 22px;
+            color: rgb(238, 22, 94);
+        }
+        .up-div-2{
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 4px;
+            margin-left: 8%;
+            margin-top: 3%;
+            text-align: center;
+            padding-top: 12px;
+        }
+        .b-3{
+            position: relative;
+
+        }
+        .box-3-child{
+            width: 100%;
+            height: 100%;
+            top: 0;
+            margin: 0;
+            position: absolute;
+            /* border: 1px solid yellow; */
+            text-align: center;
+            padding-top: 40%;
+        }
+        .b3-type{
+            font-size: 50px;
+            color: white;
+            font-weight: 600px;
+
+        }
+        .b-8{
+            grid-column: 3/5;
+            position: relative;
+        }
+        .b-9{
+            grid-column: 1/3;
+            position: relative;
+        }
+        .b-14{
+            grid-column: 3/5;
+        }
+        .b-4{
+            position: relative;
+        }
+        .box-4-child{
+            width: 100%;
+            height: 100%;
+            top: 0;
+            margin: 0;
+            position: absolute;
+            /* border: 1px solid yellow; */
+        }
+        .b-5{
+            position: relative;
+        }
+        .b-6{
+            position: relative;
+        }
+        .pin2{
+            margin-left: 0%;
+        }
+        .blk2{
+            margin-left: 160%;
+        }
+        .box2-child:hover .hvdiv1{
+            margin-top: -13%;
+            
+
+        }
+        .hvr1{
+            margin-left: 38%;
+
+        }
+        .b-10{
+            position: relative;
+        }
+        .b-12{
+            position: relative;
+        }
+        .b-7{
+            position: relative;
+        }
+        .b7-p1{
+            font-size: 20px;
+            font-weight: 400px;
+            color: white;
+        }
+        .c-div{
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            text-align: center;
+            font-size: 40px;
+            font-weight: 800;
+            color: rgb(172,96,255);
+            
+        }
+        .b-7-child{
+            padding-left: 30px;
+        }
+        .b7-hed1{
+            font-family: 25px;
+            font-weight: 600px;
+            margin-left: 20%;
+            margin-top: -15%;
+            color: white;
+            
+        }
+        .b-11{
+            position: relative;
+        }
+        .bx-11-child{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .box-11-h1{
+            font-size: 45px;
+            font-weight: 900px;
+            text-align: center;
+            color: rgb(51,51,51);
+        }
+        .box-11-btn{
+            width: 60%;
+            height: 60px;
+            border-radius: 35px;
+            border: rgb(249,142,248);
+            background: linear-gradient(to right,rgb(212,140,253),rgb(249,142,248));
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+        }
+        .box-11-btn:hover{
+            background: linear-gradient(to right,rgb(249,142,248),rgb(212,140,253));
+
+        }
+        .b-13{
+            position: relative;
+        }
+        .bx-13{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .horn{
+            width: 100px;
+            height: 60px;
+        }
+        .bx-13{
+            color: white;
+        }
+        .b-14{
+            position: relative;
+        }
+        .bx-14{
+            display: flex;
+            justify-content: end;
+            align-items: end;
+        }
+        .white-div{
+            width: 90%;
+            height: 250px;
+            background-color: rgba(255, 255, 255, 0.719);
+        }
+        .coma{
+            font-size: 40px;
+            color: black;
+            margin-left: 5%;
+            margin-top: 20px;
+
+        }
+        .b-14-hed{
+            color: black;
+            margin-top: 8px;
+            margin-left: 7%;
+        }
+        .bx-14-h2{
+            font-size: 20px;
+            font-weight: 300;
+            margin-left: 75%;
+            margin-top: 3%;
+
+        }
+        .footer{
+            width: 100%;
+            height: 300px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footerchild{
+            width: 30%;
+            height: 50%;
+            /* border: 1px solid; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .lstchild1{
+            width: 55%;
+            height: 40px;
+        }
+        .lstheddiv{
+            width: max-content;
+            height: max-content;
+            /* border: 1px solid; */
+        }
+        .lst-hed1{
+            font-size: 15px;
+            font-weight: 10;
+            margin-top: 10px;
+        }
+        .lst-icondiv{
+            display: flex;
+            margin-top: 10px;
+            /* border: 1px solid; */
+        }
+        .con-1{
+            font-size: 12px;
+            margin-left: 15px;
+
+        }
+
+
+        /* ---------------Media queries----------- */
+       
+
+@media screen and (max-width:1025px) {
+    .b-1{
+        height: 400px;
+    }
+    .b1-type{
+        margin-top: -70%;
+        width: 65%;
+        /* border: 1px solid; */
+    }
+    .up-div-1{
+        margin-left: 25%;
+    }
+    .box2-child:hover .hover-div{
+            margin-top: -26%;
+            opacity: 1;
+
+
+        }
+        .footerchild{
+                width: 50%;
+                /* border: 1px solid; */
+            }
+    
+    
+}
+       @media screen and (max-width:769px) {
+
+            .navchild-1{
+                width: 20%;
+            }
+            .navbar-2{
+            padding: 20px;
+            }
+            .nav2-child1{
+                width: 28%;
+            }
+            .div1{
+                width: 100%;
+                display: grid;
+                /* grid-template-columns: 50% 50%; */
+            }
+            .box{
+                height: 350px;
+                width: 50%;
+            }
+            .div1{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .box{
+                width: 50%;
+                height: 370px;
+            }
+            .pink-div{
+                margin-left: 0%;
+
+            }
+            .black-div{
+                margin-left: 200%;
+            }
+            .box2-child:hover .hover-div{
+                margin-top: -19%;
+            }
+            .up-div-1{
+                margin-left: 34%;
+
+            }
+            .b1-type{
+            margin-top: -60%;
+            width: 60%;
+            height:auto ;
+            /* border: 1px solid red; */
+            margin-left: 18%;
+        }
+        .b1-h1{
+            font-size: 40px;
+        }
+        .footerchild{
+                width: 60%;
+                /* border: 1px solid; */
+            }
+
+            
+        }
+        @media screen and (max-width:766px) {
+            .div1{
+                display: block;
+
+            }
+            .box{
+                width: 100%;
+                height: 650px;
+            }
+            .b1-type{
+                margin-left: 20%;
+                margin-top: -40%;
+            }
+            
+        }
+        @media screen and (max-width:650px) {
+            .b1-type{
+                margin-top: -50%;
+            }
+            
+        }
+        @media screen and (max-width:588px) {
+            .b1-type{
+                margin-top: -40%;
+            }
+            .box{
+                height: 500px;
+            }
+            
+        }
+        @media screen and (max-width:488px) {
+            .b1-type{
+                margin-top: -70%;
+            }
+            .footerchild{
+                width: 100%;
+                /* border: 1px solid; */
+            }
+            
+        }
+        @media screen and (max-width:426px) {
+
+            .navchild-1{
+                width: 40%;
+            }
+            .navbar-2{
+            padding: 10px;
+        }
+        .nav2-child1{
+            width: 50%;
+        }
+        .icon-2{
+            display: none;
+        }
+        .icon-1{
+            font-size:25px;
+            
+        }
+        .div1{
+            display: block;
+
+        }
+        .xi{
+            display: none;
+
+        }
+        .box{
+            width: 100%;
+            height: 400px;
+        }
+        .b1-type{
+            margin-top: 25%;
+            width: 100%;
+            margin-left: 0;
+        }
+        .box2-child:hover .hover-div{
+                margin-top: -17%;
+            }
+            .footerchild{
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:376px) {
+
+            .navchild-1{
+                width: 40%;
+            }
+            .navbar-2{
+            padding: 10px;
+        }
+        .nav2-child1{
+            width: 50%;
+        }
+        .icon-2{
+            display: none;
+        }
+        .icon-1{
+            font-size:25px;
+            
+        }
+        .div1{
+            display: block;
+
+        }
+        .xi{
+            display: none;
+
+        }
+        .box{
+            width: 100%;
+            height: 350px;
+        }
+        .b1-type{
+            margin-top: 25%;
+            width: 100%;
+            margin-left: 0;
+        }
+        .box2-child:hover .hover-div{
+                margin-top: -19%;
+            }
+            .footerchild{
+                width: 100%;
+            }
+        }
+
+
+
+       @media screen and (max-width:321px) {
+
+        .navchild-1{
+            width: 40%;
+        }
+        .navbar-2{
+            padding: 10px;
+        }
+        .nav2-child1{
+            width: 50%;
+        }
+        .icon-2{
+            display: none;
+        }
+        .icon-1{
+            font-size:25px;
+            
+        }
+        .div1{
+            display: block;
+
+        }
+        .xi{
+            display: none;
+
+        }
+        .box{
+            width: 100%;
+            height: 300px;
+        }
+        .b1-type{
+            margin-top: 25%;
+            width: 100%;
+            margin-left: 0;
+        }
+        .up-div-1{
+            margin-left: 30%;
+        }
+        .box2-child:hover .hover-div{
+                margin-top: -22%;
+            }
+            .footerchild{
+                width: 100%;
+            }
+            
+        
+       }
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="parent1">
+        <nav class="navbar-1">
+            <div class="navchild-1">
+                <img class="picture-1" src="./envato_market-dde916a48af7413e54aa058fe7ae6856752fca799da4bec355f00aea904bfa19.svg" alt="">
+            </div>
+
+            <div class="navchild-2">Buy Now</div>
+        </nav>
+
+        <nav class="navbar-2">
+            <div class="nav2-child1">
+                <img class="picture-1" src="./logo (1).png" alt="">
+            </div>
+            <div class="icon-div">
+                <i class="fa-solid fa-bars icon-1"></i>
+                <i class="fa-brands fa-facebook-f icon-2"></i>
+                <i class="fa-brands fa-twitter icon-2"></i>
+                <i class="fa-brands fa-google-plus-g icon-2"></i>
+                <i class="fa-brands fa-pinterest-p icon-2"></i>
+            </div>
+        </nav>
+
+
+        <div class="div1">
+            <div class="box b1">
+                <img class="picture-1" src="./1 (2).jpg" alt="">
+                <div class="child-box1">
+                    <div class="cdiv-1 xi"></div>
+                    <div class="cdiv-2 xi"></div>
+                    <div class="cdiv-3 xi"></div>
+                    <div class="cdiv-4 xi"></div>
+                    <div class="b1-type">
+                        <h1 class="b1-h1">Paper Lost <br> Boat</h1>
+                        <button class="b1-btn"> READ MORE +</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box b-2">
+                <img class="picture-1 " src="./2 (2).jpg" alt="">
+                <div class="box2-child">
+                    <div class="pandb">
+                        <div class="pink-div"></div>
+                        <div class="black-div"></div>
+                    </div>
+                    <div class="hover-div">
+                        <div class="up-div-1">
+                            <i class="fa-brands fa-squarespace h-cons"></i>
+                        </div>
+                        <div class="up-div-2">
+                            <i class="fa-solid fa-magnifying-glass h-cons"></i>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="box b-3">
+                <img class="picture-1" src="./3 (2).jpg" alt="">
+                <div class="box-3-child">
+                    <h1 class="b3-type">About Us</h1>
+                </div>
+            </div>
+            <div class="box b-4">
+                <img class="picture-1" src="./4 (1).jpg" alt="">
+                <div class="box2-child">
+                     <div class="pandb">
+                        <div class="pink-div"></div>
+                        <div class="black-div"></div>
+                    </div>
+                    <div class="hover-div">
+                        <div class="up-div-1">
+                            <i class="fa-brands fa-squarespace h-cons"></i>
+                        </div>
+                        <div class="up-div-2">
+                            <i class="fa-solid fa-magnifying-glass h-cons"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="box b-5">
+                <img class="picture-1" src="./5 (1).jpg" alt="">
+                <div class="box2-child">
+                     <div class="pandb">
+                        <div class="pink-div"></div>
+                        <div class="black-div"></div>
+                    </div>
+                    <div class="hover-div">
+                        <div class="up-div-1">
+                            <i class="fa-brands fa-squarespace h-cons"></i>
+                        </div>
+                        <div class="up-div-2">
+                            <i class="fa-solid fa-magnifying-glass h-cons"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+                
+            </div>
+
+
+
+
+            <div class="box b-6">
+                <img class="picture-1" src="./6.jpg" alt="">
+                 <div class="box2-child">
+                     <div class="pandb">
+                        <div class="pink-div"></div>
+                        <div class="black-div"></div>
+                    </div>
+                    <div class="hover-div">
+                        <div class="up-div-1">
+                            <i class="fa-brands fa-squarespace h-cons"></i>
+                        </div>
+                        <div class="up-div-2">
+                            <i class="fa-solid fa-magnifying-glass h-cons"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="box b-7">
+                <img class="picture-1" src="./7.jpg" alt="">
+                <div class="box2-child b-7-child">
+                    <p class="b7-p1">We Are Branding</p>
+                    <div class="c-div">C</div>
+                    <h1 class="b7-hed1">heck out all <br> my awesome art <br> work. Our <br> Amazing <br> Portfolio <br> Capitalize on low <br> the hanging fruit <br> to tify</h1>
+                    
+                </div>
+            </div>
+            <div class="box b-8">
+                <img class="picture-1" src="./8.jpg" alt="">
+                 <div class="box2-child">
+                     <div class="pandb">
+                        <div class="pink-div pin2"></div>
+                        <div class="black-div blk2"></div>
+                    </div>
+                    <div class="hover-div hvdiv1">
+                        <div class="up-div-1 hvr1">
+                            <i class="fa-brands fa-squarespace h-cons"></i>
+                        </div>
+                        <div class="up-div-2">
+                            <i class="fa-solid fa-magnifying-glass h-cons"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="box b-9">
+                <img class="picture-1" src="./10.jpg" alt="">
+                <div class="box2-child">
+                     <div class="pandb">
+                        <div class="pink-div pin2"></div>
+                        <div class="black-div blk2"></div>
+                    </div>
+                    <div class="hover-div hvdiv1">
+                        <div class="up-div-1 hvr1">
+                            <i class="fa-brands fa-squarespace h-cons"></i>
+                        </div>
+                        <div class="up-div-2">
+                            <i class="fa-solid fa-magnifying-glass h-cons"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="box b-10">
+                <img class="picture-1" src="./9.jpg" alt="">
+                <div class="box2-child">
+                     <div class="pandb">
+                        <div class="pink-div"></div>
+                        <div class="black-div"></div>
+                    </div>
+                    <div class="hover-div">
+                        <div class="up-div-1">
+                            <i class="fa-brands fa-squarespace h-cons"></i>
+                        </div>
+                        <div class="up-div-2">
+                            <i class="fa-solid fa-magnifying-glass h-cons"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="box b-11">
+                <img class="picture-1" src="./11.jpg" alt="">
+                <div class="box2-child  bx-11-child">
+                    <h1 class="box-11-h1">Meet Team</h1>
+                    <button class="box-11-btn">SEE TEAM +</button>
+                </div>
+            </div>
+            <div class="box b-12">
+                <img class="picture-1" src="./12.jpg" alt="">
+                <div class="box2-child">
+                     <div class="pandb">
+                        <div class="pink-div"></div>
+                        <div class="black-div"></div>
+                    </div>
+                    <div class="hover-div">
+                        <div class="up-div-1">
+                            <i class="fa-brands fa-squarespace h-cons"></i>
+                        </div>
+                        <div class="up-div-2">
+                            <i class="fa-solid fa-magnifying-glass h-cons"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="box b-13">
+                <img class="picture-1" src="./13.jpg" alt="">
+                <div class="box2-child bx-13">
+                    <div class="horn">
+                        <img class="picture-1" src="./Screenshot_2023-10-26_123508-removebg-preview.png" alt="">
+                    </div>
+                    <h1 class="box-11-h1 bx-13">Contact</h1>
+                </div>
+            </div>
+            <div class="box b-14">
+                <img class="picture-1" src="./14.jpg" alt="">
+                <div class="box2-child bx-14">
+                    <div class="white-div">
+                        <i class="fa-solid fa-quote-left coma"></i>
+                        <h1 class="b7-hed1 b-14-hed">Leverage agile frameworks to the <br>provide a robust synopsis for high</h1>
+                        <h1 class="bx-14-h2">-; John Doue</h1>
+                    </div>
+                </div>
+            </div>
+           
+
+        </div>
+
+        <div class="footer">
+            <div class="footerchild">
+                <div class="lstchild1">
+                    <img class="picture-1" src="./logo (1).png" alt="">
+                </div>
+                <div class="lst-heddiv">
+                    <h1 class="lst-hed1">© Copyright 2019 Limerick. All Rights Reserved</h1>
+                </div>
+                <div class="lst-icondiv">
+                    <i class="fa-brands fa-facebook-f icon-2 con-1"></i>
+                    <i class="fa-brands fa-twitter icon-2 con-1"></i>
+                    <i class="fa-brands fa-google-plus-g icon-2 con-1"></i>
+                    <i class="fa-brands fa-pinterest-p icon-2 con-1"></i>
+                    <i class="fa-solid fa-basketball icon-2 con-1"></i>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+</body>
+</html>
